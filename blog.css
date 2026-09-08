@@ -1,0 +1,86 @@
+/* ===================================================================
+   BLOG — CLÁUDIA GOMES ADVOCACIA TRABALHISTA
+   Construído em cima dos tokens de assets/site.css (cores, raios,
+   sombras, espaçamentos, botões). Não redefine nada do site principal.
+=================================================================== */
+
+/* ---------- Breadcrumb ---------- */
+.breadcrumb{padding:calc(var(--section-pad) * .35) 0 0;font-size:.8rem;color:var(--gray-warm)}
+.breadcrumb a{color:var(--wine)}
+.breadcrumb a:hover{text-decoration:underline}
+.breadcrumb span{margin:0 8px;opacity:.5}
+
+/* ---------- Blog hero (topo da /blog) ---------- */
+.blog-hero{padding:calc(var(--section-pad) * .6) 0 calc(var(--section-pad) * .5);background:linear-gradient(170deg,var(--cream) 0%,#EFE3C9 100%)}
+.blog-hero h1{max-width:16ch}
+.blog-hero p{max-width:56ch;font-size:1.05rem}
+
+/* ---------- Grid de artigos ---------- */
+.blog-grid-section{padding:0 0 var(--section-pad)}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+@media(max-width:980px){.blog-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.blog-grid{grid-template-columns:1fr}}
+
+.blog-card{display:flex;flex-direction:column;background:var(--paper);border:1px solid rgba(59,42,36,.12);border-radius:var(--radius-md);padding:30px 26px;transition:border-color var(--dur-fast) var(--ease),box-shadow var(--dur-fast) var(--ease),transform var(--dur-fast) var(--ease);text-align:left}
+.blog-card:hover{border-color:var(--wine);box-shadow:var(--shadow-card);transform:translateY(-3px)}
+.blog-card-category{font-family:var(--font-body);font-size:.68rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--wine);margin-bottom:14px;display:inline-block}
+.blog-card h2,.blog-card h3{font-size:1.35rem;margin-bottom:10px;line-height:1.22}
+.blog-card p{font-size:.95rem;line-height:1.65;margin-bottom:18px}
+.blog-card-meta{margin-top:auto;display:flex;align-items:center;justify-content:space-between;font-size:.78rem;color:var(--gray-warm);padding-top:14px;border-top:1px solid rgba(59,42,36,.1)}
+.blog-card-link{display:inline-flex;align-items:center;gap:6px;font-weight:500;color:var(--wine)}
+.blog-card-link .icon{transition:transform var(--dur-fast) var(--ease)}
+.blog-card:hover .blog-card-link .icon{transform:translateX(4px)}
+
+/* aviso "em breve" nos cards ainda sem conteúdo definitivo */
+.blog-card.is-placeholder{opacity:.72}
+.badge-soon{display:inline-block;font-size:.68rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gray-warm);background:rgba(59,42,36,.07);border-radius:var(--radius-pill);padding:5px 12px;margin-bottom:14px}
+
+/* ---------- Cabeçalho do artigo ---------- */
+.article-header{padding:calc(var(--section-pad) * .55) 0 40px}
+.article-header .eyebrow{margin-bottom:14px}
+.article-header h1{max-width:22ch}
+.article-subtitle{max-width:62ch;font-size:1.15rem;color:var(--gray-warm);margin-top:18px}
+.article-meta{display:flex;flex-wrap:wrap;gap:22px;margin-top:28px;padding-top:24px;border-top:1px solid rgba(59,42,36,.12);font-size:.85rem;color:var(--gray-warm)}
+.article-meta span{display:inline-flex;align-items:center;gap:7px}
+
+/* ---------- Corpo do artigo (prose) ---------- */
+.article-body{padding:0 0 var(--section-pad)}
+.article-body-inner{max-width:720px;margin-inline:auto}
+.article-body-inner h2{font-size:clamp(1.5rem,2.4vw,2rem);margin:48px 0 18px}
+.article-body-inner h3{font-size:clamp(1.15rem,1.6vw,1.35rem);margin:32px 0 14px}
+.article-body-inner p{font-size:1.05rem;line-height:1.85;margin-bottom:22px;color:var(--brown)}
+.article-body-inner ul,.article-body-inner ol{margin:0 0 24px;padding-left:1.3em;color:var(--brown)}
+.article-body-inner li{font-size:1.05rem;line-height:1.8;margin-bottom:10px}
+.article-body-inner a{color:var(--wine);text-decoration:underline;text-underline-offset:3px}
+.article-body-inner strong{color:var(--brown);font-weight:600}
+.article-body-inner blockquote{margin:32px 0;padding:24px 28px;background:var(--cream);border-left:3px solid var(--wine);border-radius:0 var(--radius-md) var(--radius-md) 0;font-family:var(--font-display);font-size:1.2rem;font-style:italic;color:var(--brown)}
+.article-body-inner hr{border:none;border-top:1px solid rgba(59,42,36,.15);margin:40px 0}
+
+/* aviso de conteúdo provisório — some assim que o texto final entrar */
+.placeholder-notice{max-width:720px;margin:0 auto 32px;padding:16px 20px;background:#FBEFD9;border:1px dashed rgba(120,26,40,.4);border-radius:var(--radius-md);font-size:.88rem;color:var(--brown)}
+.placeholder-notice strong{color:var(--wine)}
+
+/* ---------- CTA dentro do artigo ---------- */
+.article-cta{max-width:720px;margin:0 auto 56px;background:var(--brown);color:var(--cream);border-radius:var(--radius-lg);padding:40px 36px;text-align:center}
+.article-cta h3{color:var(--cream);margin-bottom:12px}
+.article-cta p{color:rgba(243,234,214,.8);margin-bottom:24px}
+
+/* ---------- Voltar ao blog ---------- */
+.article-back{max-width:720px;margin:0 auto 8px}
+.link-back{display:inline-flex;align-items:center;gap:8px;font-size:.85rem;font-weight:500;color:var(--wine)}
+.link-back .icon{transform:rotate(180deg)}
+.link-back:hover{text-decoration:underline}
+
+/* ---------- Artigos relacionados ---------- */
+.related-articles{padding:var(--section-pad) 0;background:var(--cream)}
+.related-articles h2{margin-bottom:36px}
+.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+@media(max-width:980px){.related-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.related-grid{grid-template-columns:1fr}}
+
+@media(max-width:720px){
+  .blog-hero{padding:calc(var(--section-pad) * .5) 0}
+  .article-header{padding:calc(var(--section-pad) * .45) 0 28px}
+  .article-meta{gap:14px 22px}
+  .article-cta{padding:32px 24px}
+}
