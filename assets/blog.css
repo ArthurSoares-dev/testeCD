@@ -5,7 +5,7 @@
 =================================================================== */
 
 /* ---------- Breadcrumb ---------- */
-.breadcrumb{padding:112px 0 16px;font-size:.8rem;color:var(--gray-warm)}
+.breadcrumb{padding:112px 0 4px;font-size:.8rem;color:var(--gray-warm)}
 .breadcrumb a{color:var(--wine)}
 .breadcrumb a:hover{text-decoration:underline}
 .breadcrumb span{margin:0 8px;opacity:.5}
@@ -16,7 +16,7 @@
 .blog-hero p{max-width:56ch;font-size:1.05rem}
 
 /* ---------- Grid de artigos ---------- */
-.blog-grid-section{padding:0 0 var(--section-pad)}
+.blog-grid-section{padding:var(--section-pad) 0}
 .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
 @media(max-width:980px){.blog-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:640px){.blog-grid{grid-template-columns:1fr}}
