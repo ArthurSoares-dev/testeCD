@@ -4,14 +4,8 @@
    sombras, espaçamentos, botões). Não redefine nada do site principal.
 =================================================================== */
 
-/* ---------- Breadcrumb ---------- */
-.breadcrumb{padding:112px 0 4px;font-size:.8rem;color:var(--gray-warm)}
-.breadcrumb a{color:var(--wine)}
-.breadcrumb a:hover{text-decoration:underline}
-.breadcrumb span{margin:0 8px;opacity:.5}
-
 /* ---------- Blog hero (topo da /blog) ---------- */
-.blog-hero{padding:8px 0 calc(var(--section-pad) * .5);background:linear-gradient(170deg,var(--cream) 0%,#EFE3C9 100%)}
+.blog-hero{padding:112px 0 calc(var(--section-pad) * .5);background:linear-gradient(170deg,var(--cream) 0%,#EFE3C9 100%)}
 .blog-hero h1{max-width:16ch}
 .blog-hero p{max-width:56ch;font-size:1.05rem}
 
@@ -21,10 +15,12 @@
 @media(max-width:980px){.blog-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:640px){.blog-grid{grid-template-columns:1fr}}
 
-.blog-card{display:flex;flex-direction:column;background:var(--paper);border:1px solid rgba(59,42,36,.12);border-radius:var(--radius-md);padding:30px 26px;transition:border-color var(--dur-fast) var(--ease),box-shadow var(--dur-fast) var(--ease),transform var(--dur-fast) var(--ease);text-align:left}
-.blog-card:hover{border-color:var(--wine);box-shadow:var(--shadow-card);transform:translateY(-3px)}
-.blog-card-category{font-family:var(--font-body);font-size:.68rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--wine);margin-bottom:14px;display:inline-block}
-.blog-card h2,.blog-card h3{font-size:1.35rem;margin-bottom:10px;line-height:1.22}
+.blog-card{position:relative;display:flex;flex-direction:column;background:var(--paper);border:1px solid rgba(59,42,36,.12);border-radius:var(--radius-md);padding:34px 28px;box-shadow:var(--shadow-card);transition:border-color var(--dur-fast) var(--ease),box-shadow var(--dur-fast) var(--ease),transform var(--dur-fast) var(--ease);text-align:left}
+.blog-card:hover{border-color:var(--wine);box-shadow:0 24px 48px -24px rgba(59,42,36,.35);transform:translateY(-5px)}
+.blog-card-category{font-family:var(--font-body);font-size:.66rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--wine);background:rgba(120,26,40,.08);border-radius:var(--radius-pill);padding:6px 14px;margin-bottom:18px;display:inline-block}
+.blog-card h2,.blog-card h3{font-size:1.35rem;margin-bottom:16px;line-height:1.22;position:relative;padding-bottom:16px}
+.blog-card h2::after,.blog-card h3::after{content:'';position:absolute;left:0;bottom:0;width:30px;height:1px;background:var(--champagne);transition:width var(--dur-fast) var(--ease),background var(--dur-fast) var(--ease)}
+.blog-card:hover h2::after,.blog-card:hover h3::after{width:56px;background:var(--wine)}
 .blog-card p{font-size:.95rem;line-height:1.65;margin-bottom:18px}
 .blog-card-meta{margin-top:auto;display:flex;align-items:center;justify-content:space-between;font-size:.78rem;color:var(--gray-warm);padding-top:14px;border-top:1px solid rgba(59,42,36,.1)}
 .blog-card-link{display:inline-flex;align-items:center;gap:6px;font-weight:500;color:var(--wine)}
@@ -36,7 +32,7 @@
 .badge-soon{display:inline-block;font-size:.68rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gray-warm);background:rgba(59,42,36,.07);border-radius:var(--radius-pill);padding:5px 12px;margin-bottom:14px}
 
 /* ---------- Cabeçalho do artigo ---------- */
-.article-header{padding:8px 0 40px}
+.article-header{padding:112px 0 40px}
 .article-header .eyebrow{margin-bottom:14px}
 .article-header h1{max-width:22ch}
 .article-subtitle{max-width:62ch;font-size:1.15rem;color:var(--gray-warm);margin-top:18px}
@@ -85,8 +81,8 @@
 .author-box p{font-size:.88rem;color:var(--gray-warm);margin:2px 0 0}
 
 @media(max-width:720px){
-  .blog-hero{padding:8px 0 calc(var(--section-pad) * .5)}
-  .article-header{padding:8px 0 28px}
+  .blog-hero{padding:112px 0 calc(var(--section-pad) * .5)}
+  .article-header{padding:112px 0 28px}
   .article-meta{gap:14px 22px}
   .article-cta{padding:32px 24px}
 }
