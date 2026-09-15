@@ -44,6 +44,7 @@
   <symbol id="icon-mail" viewBox="0 0 48 48"><path d="M6 10h36v28H6z"/><path d="m6 12 18 14L42 12"/></symbol>
   <symbol id="icon-facebook" viewBox="0 0 48 48"><path d="M28 44V26h6l1-7h-7v-5c0-2 .6-3.5 3.5-3.5H35V4.3C34.3 4.2 32 4 29.3 4 23.7 4 20 7.4 20 13.6V19h-6v7h6v18z"/></symbol>
   <symbol id="icon-arrow-right" viewBox="0 0 48 48"><path d="M6 24h34m-12-12 12 12-12 12"/></symbol>
+  <symbol id="icon-clock" viewBox="0 0 48 48"><circle cx="24" cy="24" r="18"/><path d="M24 14v10l7 5"/></symbol>
 </defs></svg>
 
 <!-- LOADER -->
@@ -98,60 +99,66 @@
 
 <main id="topo">
 
-
-  <!-- BLOG HERO -->
-  <section class="blog-hero">
+  <!-- INTRODUÇÃO COMPACTA -->
+  <section class="blog-intro">
     <div class="container">
-      <p class="eyebrow">Blog Jurídico — Direito do Trabalho</p>
-      <h1>Orientação clara sobre seus direitos trabalhistas</h1>
-      <p>Artigos escritos para explicar, em linguagem acessível, situações comuns enfrentadas por trabalhadores em São Gonçalo, Niterói e Rio de Janeiro.</p>
+      <p class="eyebrow" data-reveal>Blog Jurídico — Direito do Trabalho</p>
+      <h1 data-reveal>Orientação clara sobre seus direitos trabalhistas</h1>
+      <p data-reveal>Artigos escritos para explicar, em linguagem acessível, situações comuns enfrentadas por trabalhadores em São Gonçalo, Niterói e Rio de Janeiro.</p>
     </div>
   </section>
 
-  <!-- GRID DE ARTIGOS -->
-  <section class="blog-grid-section">
+  <!-- DESTAQUE + ARTIGOS -->
+  <section class="blog-editorial">
     <div class="container">
-      <div class="blog-grid">
+      <h2 class="section-label" data-reveal>Artigos recentes</h2>
 
-        <article class="blog-card">
+      <div class="blog-editorial-grid">
+
+        <article class="blog-featured" data-reveal>
+          <img class="monogram-wm" src="/assets/logo.png" alt="" aria-hidden="true">
           <span class="blog-card-category">Rescisão &amp; FGTS</span>
-          <h2><a href="/blog/fgts-nao-depositado-rescisao-indireta/">FGTS não depositado: posso pedir rescisão indireta?</a></h2>
-          <p>Entenda o Tema 70 do TST, os direitos do trabalhador e a multa do art. 477 da CLT quando o empregador deixa de depositar o FGTS.</p>
+          <h3><a href="/blog/fgts-nao-depositado-rescisao-indireta/">FGTS não depositado: posso pedir rescisão indireta?</a></h3>
+          <p>Seu empregador deixou de depositar o FGTS por vários meses? Em algumas situações, essa irregularidade pode permitir que o trabalhador encerre o contrato sem abrir mão de seus direitos.</p>
           <div class="blog-card-meta">
-            <span>Direito do Trabalho</span>
+            <span><svg class="icon" width="13" height="13"><use href="#icon-clock"/></svg>7 min de leitura</span>
             <a class="blog-card-link" href="/blog/fgts-nao-depositado-rescisao-indireta/">Ler artigo <svg class="icon" width="14" height="14"><use href="#icon-arrow-right"/></svg></a>
           </div>
         </article>
 
-        <article class="blog-card">
-          <span class="blog-card-category">Verbas Rescisórias</span>
-          <h2><a href="/blog/empresa-nao-pagou-minha-rescisao/">A empresa não pagou minha rescisão: o que fazer?</a></h2>
-          <p>O prazo de 10 dias para o pagamento, a multa do art. 477 da CLT e os direitos do trabalhador quando a rescisão atrasa ou vem incompleta.</p>
-          <div class="blog-card-meta">
-            <span>Direito do Trabalho</span>
-            <a class="blog-card-link" href="/blog/empresa-nao-pagou-minha-rescisao/">Ler artigo <svg class="icon" width="14" height="14"><use href="#icon-arrow-right"/></svg></a>
-          </div>
-        </article>
+        <div class="blog-secondary-list">
 
-        <article class="blog-card">
-          <span class="blog-card-category">Vínculo Empregatício</span>
-          <h2><a href="/blog/trabalhei-sem-carteira-assinada-direitos/">Trabalhei sem carteira assinada: quais são os meus direitos?</a></h2>
-          <p>Quando existe vínculo de emprego, quais direitos podem ser cobrados e como provar o trabalho sem registro.</p>
-          <div class="blog-card-meta">
-            <span>Direito do Trabalho</span>
-            <a class="blog-card-link" href="/blog/trabalhei-sem-carteira-assinada-direitos/">Ler artigo <svg class="icon" width="14" height="14"><use href="#icon-arrow-right"/></svg></a>
-          </div>
-        </article>
+          <article class="blog-compact-card" data-reveal>
+            <span class="blog-card-category">Verbas Rescisórias</span>
+            <h3><a href="/blog/empresa-nao-pagou-minha-rescisao/">A empresa não pagou minha rescisão: o que fazer?</a></h3>
+            <p>Passaram os 10 dias e o dinheiro da sua rescisão ainda não caiu? Existe um prazo legal para esse pagamento — e uma multa quando ele não é respeitado.</p>
+            <div class="blog-card-meta">
+              <span><svg class="icon" width="13" height="13"><use href="#icon-clock"/></svg>5 min de leitura</span>
+              <a class="blog-card-link" href="/blog/empresa-nao-pagou-minha-rescisao/">Ler artigo <svg class="icon" width="14" height="14"><use href="#icon-arrow-right"/></svg></a>
+            </div>
+          </article>
 
-        <article class="blog-card">
-          <span class="blog-card-category">Estabilidade &amp; Saúde</span>
-          <h2><a href="/blog/fui-demitido-doente-direitos/">Fui demitido estando doente: quais são os meus direitos?</a></h2>
-          <p>Estabilidade, doença ocupacional, dispensa discriminatória e reintegração ao emprego.</p>
-          <div class="blog-card-meta">
-            <span>Direito do Trabalho</span>
-            <a class="blog-card-link" href="/blog/fui-demitido-doente-direitos/">Ler artigo <svg class="icon" width="14" height="14"><use href="#icon-arrow-right"/></svg></a>
-          </div>
-        </article>
+          <article class="blog-compact-card" data-reveal data-reveal-delay="1">
+            <span class="blog-card-category">Vínculo Empregatício</span>
+            <h3><a href="/blog/trabalhei-sem-carteira-assinada-direitos/">Trabalhei sem carteira assinada: quais são os meus direitos?</a></h3>
+            <p>Trabalhou meses ou anos sem registro em carteira? Isso não significa, necessariamente, que você ficou sem direitos — entenda quando a Justiça reconhece o vínculo de emprego.</p>
+            <div class="blog-card-meta">
+              <span><svg class="icon" width="13" height="13"><use href="#icon-clock"/></svg>5 min de leitura</span>
+              <a class="blog-card-link" href="/blog/trabalhei-sem-carteira-assinada-direitos/">Ler artigo <svg class="icon" width="14" height="14"><use href="#icon-arrow-right"/></svg></a>
+            </div>
+          </article>
+
+          <article class="blog-compact-card" data-reveal data-reveal-delay="2">
+            <span class="blog-card-category">Estabilidade &amp; Saúde</span>
+            <h3><a href="/blog/fui-demitido-doente-direitos/">Fui demitido estando doente: quais são os meus direitos?</a></h3>
+            <p>Foi dispensado no meio de um tratamento médico? Em algumas situações a demissão pode ser considerada irregular — e existem direitos que muitos trabalhadores não sabem que têm.</p>
+            <div class="blog-card-meta">
+              <span><svg class="icon" width="13" height="13"><use href="#icon-clock"/></svg>10 min de leitura</span>
+              <a class="blog-card-link" href="/blog/fui-demitido-doente-direitos/">Ler artigo <svg class="icon" width="14" height="14"><use href="#icon-arrow-right"/></svg></a>
+            </div>
+          </article>
+
+        </div>
 
       </div>
     </div>
