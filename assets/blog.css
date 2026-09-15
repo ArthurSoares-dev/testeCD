@@ -5,13 +5,13 @@
 =================================================================== */
 
 /* ---------- Breadcrumb ---------- */
-.breadcrumb{padding:112px 0 0;font-size:.8rem;color:var(--gray-warm)}
+.breadcrumb{padding:112px 0 16px;font-size:.8rem;color:var(--gray-warm)}
 .breadcrumb a{color:var(--wine)}
 .breadcrumb a:hover{text-decoration:underline}
 .breadcrumb span{margin:0 8px;opacity:.5}
 
 /* ---------- Blog hero (topo da /blog) ---------- */
-.blog-hero{padding:calc(var(--section-pad) * .6) 0 calc(var(--section-pad) * .5);background:linear-gradient(170deg,var(--cream) 0%,#EFE3C9 100%)}
+.blog-hero{padding:8px 0 calc(var(--section-pad) * .5);background:linear-gradient(170deg,var(--cream) 0%,#EFE3C9 100%)}
 .blog-hero h1{max-width:16ch}
 .blog-hero p{max-width:56ch;font-size:1.05rem}
 
@@ -36,7 +36,7 @@
 .badge-soon{display:inline-block;font-size:.68rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gray-warm);background:rgba(59,42,36,.07);border-radius:var(--radius-pill);padding:5px 12px;margin-bottom:14px}
 
 /* ---------- Cabeçalho do artigo ---------- */
-.article-header{padding:calc(var(--section-pad) * .55) 0 40px}
+.article-header{padding:8px 0 40px}
 .article-header .eyebrow{margin-bottom:14px}
 .article-header h1{max-width:22ch}
 .article-subtitle{max-width:62ch;font-size:1.15rem;color:var(--gray-warm);margin-top:18px}
@@ -85,8 +85,8 @@
 .author-box p{font-size:.88rem;color:var(--gray-warm);margin:2px 0 0}
 
 @media(max-width:720px){
-  .blog-hero{padding:calc(var(--section-pad) * .5) 0}
-  .article-header{padding:calc(var(--section-pad) * .45) 0 28px}
+  .blog-hero{padding:8px 0 calc(var(--section-pad) * .5)}
+  .article-header{padding:8px 0 28px}
   .article-meta{gap:14px 22px}
   .article-cta{padding:32px 24px}
 }
