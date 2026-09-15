@@ -76,6 +76,7 @@ function initCounters(){
     var target=parseInt(el.getAttribute('data-counter'),10)||0;
     if(prefersReducedMotion){el.textContent=target;return;}
     var dur=1400,start=null;
+    el.textContent=0;
     function step(ts){if(!start)start=ts;var p=Math.min((ts-start)/dur,1),ease=1-Math.pow(1-p,3);el.textContent=Math.floor(ease*target);if(p<1)requestAnimationFrame(step);else el.textContent=target;}
     requestAnimationFrame(step);
   }

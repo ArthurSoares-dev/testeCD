@@ -511,7 +511,7 @@ section[id],footer[id]{scroll-margin-top:88px}
           <a href="#areas" class="btn btn-ghost">Conheça as áreas de atuação</a>
         </div>
         <ul class="hero-badges">
-          <li><strong data-counter="34">0</strong><span>anos de experiência</span></li>
+          <li><strong data-counter="34">34</strong><span>anos de experiência</span></li>
           <li><strong class="badge-static">OAB/RJ</strong><span>82.208</span></li>
           <li><strong class="badge-static">Online</strong><span>Atendimento por chamada</span></li>
           <li><strong class="badge-static">Presencial</strong><span>São Gonçalo — RJ</span></li>
@@ -570,9 +570,9 @@ section[id],footer[id]{scroll-margin-top:88px}
         <p>Acredito que uma advocacia de excelência exige preparo, experiência e proximidade com o cliente, para que cada decisão seja tomada de forma segura e estratégica.</p>
         <p>A relação entre advogado e cliente exige confiança. Meu compromisso é atuar com ética, dedicação e responsabilidade na defesa dos interesses de cada pessoa que busca meu trabalho.</p>
         <ul class="about-highlights">
-          <li><strong data-counter="34">0</strong><span>Anos de experiência</span></li>
+          <li><strong data-counter="34">34</strong><span>Anos de experiência</span></li>
           <li><strong class="badge-static">OAB/RJ</strong><span>82.208</span></li>
-          <li><strong data-counter="8">0</strong><span>Especializações em Direito do Trabalho</span></li>
+          <li><strong data-counter="8">8</strong><span>Especializações em Direito do Trabalho</span></li>
           <li><strong class="badge-static">Online</strong><span>&amp; Presencial</span></li>
         </ul>
       </div>
@@ -886,6 +886,7 @@ function initCounters(){
     var target=parseInt(el.getAttribute('data-counter'),10)||0;
     if(prefersReducedMotion){el.textContent=target;return;}
     var dur=1400,start=null;
+    el.textContent=0;
     function step(ts){if(!start)start=ts;var p=Math.min((ts-start)/dur,1),ease=1-Math.pow(1-p,3);el.textContent=Math.floor(ease*target);if(p<1)requestAnimationFrame(step);else el.textContent=target;}
     requestAnimationFrame(step);
   }

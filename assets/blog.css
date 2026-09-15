@@ -5,7 +5,7 @@
 =================================================================== */
 
 /* ---------- Breadcrumb ---------- */
-.breadcrumb{padding:clamp(140px,18vw,200px) 0 0;font-size:.8rem;color:var(--gray-warm)}
+.breadcrumb{padding:112px 0 0;font-size:.8rem;color:var(--gray-warm)}
 .breadcrumb a{color:var(--wine)}
 .breadcrumb a:hover{text-decoration:underline}
 .breadcrumb span{margin:0 8px;opacity:.5}
@@ -85,7 +85,6 @@
 .author-box p{font-size:.88rem;color:var(--gray-warm);margin:2px 0 0}
 
 @media(max-width:720px){
-  .breadcrumb{padding-top:128px}
   .blog-hero{padding:calc(var(--section-pad) * .5) 0}
   .article-header{padding:calc(var(--section-pad) * .45) 0 28px}
   .article-meta{gap:14px 22px}
