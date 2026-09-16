@@ -882,15 +882,21 @@ function initReveal(){
 function initCounters(){
   var counters=document.querySelectorAll('[data-counter]');
   if(!counters.length)return;
+  // O valor factual (ex.: 34) já está no HTML e NUNCA é alterado por JS.
+  // A animação é apenas uma entrada suave (fade + leve movimento), sem contagem a partir de 0.
   function animate(el){
-    var target=parseInt(el.getAttribute('data-counter'),10)||0;
-    if(prefersReducedMotion){el.textContent=target;return;}
-    var dur=1400,start=null;
-    el.textContent=0;
-    function step(ts){if(!start)start=ts;var p=Math.min((ts-start)/dur,1),ease=1-Math.pow(1-p,3);el.textContent=Math.floor(ease*target);if(p<1)requestAnimationFrame(step);else el.textContent=target;}
-    requestAnimationFrame(step);
+    if(prefersReducedMotion)return;
+    el.style.transition='opacity .7s var(--ease-soft), transform .7s var(--ease-soft)';
+    el.style.opacity='1';
+    el.style.transform='translateY(0)';
   }
   if(!('IntersectionObserver' in window)){counters.forEach(animate);return;}
+  if(!prefersReducedMotion){
+    counters.forEach(function(el){
+      el.style.opacity='0';
+      el.style.transform='translateY(14px)';
+    });
+  }
   var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){animate(e.target);obs.unobserve(e.target);}});},{threshold:0.6});
   counters.forEach(function(el){obs.observe(el);});
 }
